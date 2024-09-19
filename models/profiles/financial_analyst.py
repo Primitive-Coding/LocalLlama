@@ -30,7 +30,7 @@ class FinancialAnalyst:
         context = ""
         print("\n\n-- Starting Chat --\n\n Type 'exit' at any time to quit.\n\n")
         while True:
-            user_input = input("[User]: ")
+            user_input = input("\n[User]: ")
             if user_input.lower() == "exit":
                 break
             invoke_instructions = {"context": context, "question": user_input}

@@ -31,19 +31,13 @@ class Model:
         result = self.model.invoke(input=prompt)
         return result
 
-    def get_chain_result(self, user_prompt: str):
-        prompt = ChatPromptTemplate.from_template(financial_analyst)
-        chain = prompt | self.model
-        result = chain.invoke({"report": user_prompt})
-        return result
-
     def handle_chat(self, invoke_instructions: dict):
         prompt = ChatPromptTemplate.from_template(chat_template)
         chain = prompt | self.model
         result = chain.invoke(invoke_instructions)
         return result
 
-    def get_chain_result2(self, invoke_instructions: dict, template: str) -> str:
+    def get_chain_result(self, invoke_instructions: dict, template: str) -> str:
         prompt = ChatPromptTemplate.from_template(template)
         chain = prompt | self.model
         result = chain.invoke(invoke_instructions)
