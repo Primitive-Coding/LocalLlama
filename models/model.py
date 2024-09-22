@@ -5,9 +5,6 @@ from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 
 
-from models.templates import financial_analyst
-
-
 chat_template = """
 
 Answer the question below. 
@@ -17,10 +14,6 @@ Here is the conversation history: {context}
 Question: {question}
 
 Answer: """
-
-
-import selenium.webdriver as webdriver
-from selenium.webdriver.chrome.service import Service
 
 
 class Model:
